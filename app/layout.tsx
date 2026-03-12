@@ -6,7 +6,7 @@ import type { ReactNode } from 'react';
 export const metadata: Metadata = {
   title: 'STE WildTracks',
   description: 'Live elephant real time tracking dashboard',
-};
+} satisfies import('next').Metadata;
 
 export const viewport: Viewport = {
   width: 'device-width',
