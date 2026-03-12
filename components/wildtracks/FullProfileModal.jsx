@@ -17,10 +17,10 @@ export default function FullProfileModal({
   if (!open || !elephant) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-sm sm:p-6">
-      <div className="flex max-h-[90vh] w-full max-w-4xl flex-col overflow-hidden rounded-3xl border border-slate-800 bg-slate-900 shadow-2xl">
-        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-slate-800 bg-slate-900 p-6">
-          <h2 className="text-2xl font-bold text-white">Elephant Profile</h2>
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-slate-950/80 p-2 backdrop-blur-sm sm:p-6">
+      <div className="flex max-h-[95vh] w-full max-w-4xl flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-2xl sm:max-h-[90vh] sm:rounded-3xl">
+        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-slate-800 bg-slate-900 p-4 sm:p-6">
+          <h2 className="text-xl font-bold text-white sm:text-2xl">Elephant Profile</h2>
           <button
             onClick={onClose}
             className="rounded-xl bg-slate-800 p-2 text-slate-400 transition hover:text-white"
@@ -29,7 +29,7 @@ export default function FullProfileModal({
           </button>
         </div>
 
-        <div className="custom-scrollbar flex-1 overflow-y-auto p-6">
+        <div className="custom-scrollbar flex-1 overflow-y-auto p-4 sm:p-6">
           <div className="flex flex-col gap-8 md:flex-row">
             <div className="flex w-full flex-col gap-6 md:w-1/3">
               <div className="relative aspect-square overflow-hidden rounded-2xl border border-slate-700 bg-slate-800 text-slate-500">

@@ -17,7 +17,7 @@ export default function ElephantListPanel({
   setSearchQuery,
 }) {
   return (
-    <div className="flex h-[450px] flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/85 shadow-xl">
+    <div className="flex h-[420px] flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/85 shadow-xl sm:h-[450px]">
       <div className="border-b border-slate-800 bg-slate-900/70 p-4">
         <h3 className="mb-3 flex items-center justify-between text-sm font-semibold uppercase tracking-wider text-white">
           Sidebar – List Panel
@@ -27,12 +27,12 @@ export default function ElephantListPanel({
         </h3>
 
         <div className="space-y-3">
-          <div className="flex rounded-xl bg-slate-950 p-1">
+          <div className="grid grid-cols-3 gap-1 rounded-xl bg-slate-950 p-1">
             {ACTIVITY_FILTERS.map((status) => (
               <button
                 key={status}
                 onClick={() => setFilterStatus(status)}
-                className={`flex-1 rounded-lg py-1.5 text-xs transition ${
+                className={`rounded-lg py-1.5 text-xs transition ${
                   filterStatus === status
                     ? 'bg-slate-800 font-medium text-white'
                     : 'text-slate-400 hover:text-slate-200'
