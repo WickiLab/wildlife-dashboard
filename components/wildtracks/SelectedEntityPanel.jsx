@@ -13,7 +13,7 @@ export default function SelectedEntityPanel({
   const statusTheme = STATUS_STYLES[elephant.status];
 
   return (
-    <div className="relative mt-6 rounded-2xl border border-slate-800 bg-slate-900/90 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur">
+    <div className="relative mt-6 rounded-2xl border border-slate-800 bg-slate-900/90 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur sm:p-5">
       <button
         onClick={() => setSelectedEntityId(null)}
         className="absolute right-4 top-4 text-slate-400 transition hover:text-white"
@@ -21,7 +21,7 @@ export default function SelectedEntityPanel({
         <X className="h-5 w-5" />
       </button>
 
-      <div className="mb-4 pr-8">
+      <div className="mb-4 pr-10 sm:pr-8">
         <div className="mb-1 flex items-center space-x-3">
           <h2 className="text-xl font-bold text-white">Elephant: {elephant.name}</h2>
           <span
@@ -47,7 +47,7 @@ export default function SelectedEntityPanel({
         </div>
       </div>
 
-      <div className="mb-5 grid grid-cols-2 gap-4 md:grid-cols-4">
+      <div className="mb-5 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-4">
         <div className="rounded-xl border border-slate-800 bg-slate-950 p-3">
           <div className="mb-1 text-xs text-slate-500">Status</div>
           <div className={`font-semibold ${elephant.activity === 'Moving' ? 'text-emerald-400' : 'text-slate-300'}`}>
@@ -73,7 +73,7 @@ export default function SelectedEntityPanel({
         </div>
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <button
           onClick={onOpenProfile}
           className="flex items-center space-x-2 text-sm font-medium text-emerald-400 transition hover:text-emerald-300"
